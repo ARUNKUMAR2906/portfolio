@@ -3,11 +3,14 @@ import twitterIcon from "../assets/twitter-dark.svg";
 import githubIcon from "../assets/github-dark.svg";
 import linkedinIcon from "../assets/linkedin-dark.svg";
 import { motion } from "framer-motion";
-import CV from "../assets/cv.pdf";
+import CV from "../assets/CV.pdf";
 
-const Hero = ({id}) => {
+const Hero = ({ id }) => {
   return (
-    <section id={id} className=" p-4 flex flex-col gap-4 items-center justify-center text-center  h-screen pt-5 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-600 md:flex-row-reverse md:justify-center md:items-center md:gap-0">
+    <section
+      id={id}
+      className=" p-4 flex flex-col gap-4 items-center justify-center text-center  h-screen pt-5 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-600 md:flex-row-reverse md:justify-center md:items-center md:gap-0"
+    >
       <div className="md:w-1/2 flex justify-center">
         <img
           className="w-44 md:w-60 xl:w-80 rounded-full"
