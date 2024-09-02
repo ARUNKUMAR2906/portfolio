@@ -31,7 +31,7 @@ const Hero = ({ id }) => {
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/arunkumar-babu-7983502ba/"
             target="_blank"
           >
             <img
@@ -43,7 +43,7 @@ const Hero = ({ id }) => {
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            href="https://github.com/"
+            href="https://github.com/ARUNKUMAR2906"
             target="_blank"
           >
             <img
@@ -55,7 +55,7 @@ const Hero = ({ id }) => {
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            href="https://twitter.com/"
+            href="https://x.com/Arundev2901"
             target="_blank"
           >
             <img
