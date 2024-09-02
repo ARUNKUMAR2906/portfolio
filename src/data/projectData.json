@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Blog Site",
+    "image": "blog-site.png",
+    "livesite": "https://dev-blogs-et2s.onrender.com/",
+    "github": "https://github.com/ARUNKUMAR2906/blog-site"
+  },
+  {
+    "name": "Weather App",
+    "image": "weather-site.png",
+    "livesite": "https://weather-app-arun.vercel.app/",
+    "github": "https://github.com/ARUNKUMAR2906/Weather-app"
+  },
+  {
+    "name": "Todo List App",
+    "image": "todo-site.png",
+    "livesite": "https://todolist-arun-29.vercel.app/landing",
+    "github": "https://github.com/ARUNKUMAR2906/Todolist"
+  },
+  {
+    "name": "Udemy Clone",
+    "image": "udemy-site.png",
+    "livesite": "https://udemy-react-arun.vercel.app/",
+    "github": "https://github.com/ARUNKUMAR2906/udemy-clone"
+  },
+  {
+    "name": "Shopping site",
+    "image": "shopping-site.png",
+    "livesite": "https://arunkumar2906.github.io/Nostra-E-commerce/",
+    "github": "https://github.com/ARUNKUMAR2906/Nostra-E-commerce"
+  },
+  {
+    "name": "Greenden site",
+    "image": "greenden-site.png",
+    "livesite": "https://arunkumar2906.github.io/Greenden-tailwind/",
+    "github": "https://github.com/ARUNKUMAR2906/Greenden-tailwind"
+  }
+]
