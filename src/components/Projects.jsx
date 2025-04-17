@@ -24,15 +24,19 @@ const Projects = ({ id }) => {
         Projects
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 container font-robomono">
-        {projectData.map((project, index) => (
+        {projectData.map((project) => (
           <div
-            key={index}
+            key={project.id} // Assuming `project.id` exists
             className="border p-4 rounded-lg shadow-md transition duration-200 ease-in-out hover:scale-105 active:translate-y-2 active:shadow-sm"
           >
-            <a href={project.livesite} target="_blank">
+            <a
+              href={project.livesite}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={images[project.image]}
-                alt={project.name}
+                alt={`${project.name} screenshot`}
                 className="rounded-t-lg h-44 w-full object-cover"
               />
               <h3 className="text-lg font-semibold mt-4 text-gray-200">

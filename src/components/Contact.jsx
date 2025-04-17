@@ -30,7 +30,7 @@ const Contact = ({ id }) => {
   };
 
   return (
-    <section id={id}>
+    <section id={id} className="py-8 lg:py-16 px-4 mx-auto max-w-screen-xl">
       {showMessage && (
         <motion.div
           className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-gray-200 px-4 py-2 rounded-md shadow-lg font-robomono"
@@ -42,13 +42,15 @@ const Contact = ({ id }) => {
         </motion.div>
       )}
 
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-xl">
-        <h2 className="mb-4 uppercase text-xl tracking-tight font-extrabold text-center text-gray-200 font-rubik md:text-3xl">
+      <div className="space-y-8 text-center max-w-2xl mx-auto">
+        <h2 className="uppercase text-xl tracking-tight font-extrabold text-gray-200 font-rubik md:text-3xl">
           Contact me
         </h2>
-        <form onSubmit={onSubmit} className="space-y-8" method="POST">
+
+        <form onSubmit={onSubmit} className="space-y-8">
+          {/* Name Input */}
           <div className="font-robomono">
-            <label className="block mb-2 text-sm font-medium text-gray-200">
+            <label className="block mb-2 text-start text-sm font-medium text-gray-200">
               Name
             </label>
             <input
@@ -63,9 +65,10 @@ const Contact = ({ id }) => {
             />
             <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
-          
+
+          {/* Email Input */}
           <div>
-            <label className="block mb-2 text-sm font-medium text-gray-200">
+            <label className="block mb-2 text-start text-sm font-medium text-gray-200">
               Your email
             </label>
             <input
@@ -84,9 +87,10 @@ const Contact = ({ id }) => {
               errors={state.errors}
             />
           </div>
-          
-          <div className="sm:col-span-2">
-            <label className="block mb-2 text-sm font-medium text-gray-200">
+
+          {/* Message Input */}
+          <div>
+            <label className="block mb-2 text-start text-sm font-medium text-gray-200">
               Your message
             </label>
             <textarea
@@ -105,12 +109,13 @@ const Contact = ({ id }) => {
               errors={state.errors}
             />
           </div>
-          
+
+          {/* Submit Button */}
           <motion.button
             type="submit"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="mt-1 md:mt-2 bg-gray-200 text-gray-900 rounded-lg px-4 py-2 font-robomono hover:bg-gradient-to-r from-violet-500 to-purple-500 active:translate-y-2 active:shadow-sm"
+            className="mt-1 md:mt-2 rounded-lg px-4 py-2 font-robomono bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:bg-gradient-to-l active:translate-y-1 xl:text-xl transition duration-300"
             disabled={state.submitting}
           >
             Send Message

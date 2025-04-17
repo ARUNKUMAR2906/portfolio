@@ -5,7 +5,8 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import ScrollToTopButton from "./components/ScrollToTopButton"; // Import the button
+import ScrollToTopButton from "./components/ScrollToTopButton";
+import ScrollProgress from "./components/ScrollProgress";
 
 function App() {
   const [isButtonVisible, setIsButtonVisible] = useState(false);
@@ -29,12 +30,15 @@ function App() {
 
   return (
     <div className="bg-[#222] scroll-smooth">
-      <Hero id="hero" />
-      <About id="about" />
-      <Skills id="skills" />
-      <Projects id="projects" />
-      <Contact id="contact" />
-      <Footer id="footer" />
+      <div className="max-w-screen-xl mx-auto px-4">
+        <ScrollProgress />
+        <Hero id="hero" />
+        <About id="about" />
+        <Skills id="skills" />
+        <Projects id="projects" />
+        <Contact id="contact" />
+        <Footer id="footer" />
+      </div>
       <ScrollToTopButton isVisible={isButtonVisible} />
     </div>
   );
