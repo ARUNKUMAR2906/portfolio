@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -28,17 +29,77 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <div className="bg-[#222] scroll-smooth">
-      <div className="max-w-screen-xl mx-auto px-4">
+    <div className="bg-[#121212] text-white scroll-smooth">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <ScrollProgress />
-        <Hero id="hero" />
-        <About id="about" />
-        <Skills id="skills" />
-        <Projects id="projects" />
-        <Contact id="contact" />
-        <Footer id="footer" />
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <Hero id="hero" />
+        </motion.div>
+
+        <motion.div
+          id="about"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <About />
+        </motion.div>
+
+        <motion.div
+          id="skills"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <Skills />
+        </motion.div>
+
+        <motion.div
+          id="projects"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <Projects />
+        </motion.div>
+
+        <motion.div
+          id="contact"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <Contact />
+        </motion.div>
+
+        <motion.div
+          id="footer"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <Footer />
+        </motion.div>
       </div>
+
       <ScrollToTopButton isVisible={isButtonVisible} />
     </div>
   );
